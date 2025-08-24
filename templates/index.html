@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Your AI Crypto Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🚀 Your AI Crypto Assistant</h1>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-label">Live Data</span>
+                    <span class="stat-value" id="status">●</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Chat Container -->
+    <main class="main-container">
+        <div class="chat-container">
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-text">
+                            <p>Hello! I'm your AI crypto assistant. I can help you with:</p>
+                            <ul>
+                                <li>Real-time cryptocurrency prices</li>
+                                <li>Market analysis and trends</li>
+                                <li>Investment insights</li>
+                                <li>Crypto education</li>
+                            </ul>
+                            <p>What would you like to know about crypto today?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Ask about Bitcoin, Ethereum, market trends..." autocomplete="off">
+                    <button id="sendButton" class="send-button">
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+                <div class="quick-actions">
+                    <button class="quick-btn" data-message="What's the current Bitcoin price?">BTC Price</button>
+                    <button class="quick-btn" data-message="Show me trending cryptocurrencies">Trending</button>
+                    <button class="quick-btn" data-message="Explain blockchain technology">Blockchain</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sidebar Sections -->
+    <aside class="sidebar">
+        <!-- About Section -->
+        <section class="sidebar-section">
+            <h3>About</h3>
+            <p>Advanced AI-powered cryptocurrency assistant providing real-time market data and expert insights.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="sidebar-section">
+            <h3>Features</h3>
+            <ul>
+                <li>Real-time crypto prices</li>
+                <li>Market trend analysis</li>
+                <li>AI-powered insights</li>
+                <li>Educational content</li>
+                <li>Investment guidance</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="sidebar-section">
+            <h3>Contact</h3>
+            <p>Built with Flask, OpenAI, and Gemini AI</p>
+            <div class="contact-links">
+                <a href="#" class="contact-link">GitHub</a>
+                <a href="#" class="contact-link">Support</a>
+            </div>
+        </section>
+    </aside>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Processing your request...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
